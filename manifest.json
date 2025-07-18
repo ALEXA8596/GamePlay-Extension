@@ -1,0 +1,38 @@
+{
+  "name": "GamePlayUS Population Helper",
+  "version": "0.1",
+  "manifest_version": 3,
+  "description": "A Chrome extension to assist adding facilities and their attributes to GamePlayUS's DB.",
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+      "https://gameplayus.com/*",
+      "https://www.gameplayus.com/*"
+      ],
+      "js": ["content-script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "Open GamePlayUS Helper",
+    "default_icon": {
+      "16": "images/favicon.png",
+      "128": "images/gameplay_inc_logo.jpg"
+    }
+  },
+  "icons": {
+    "128": "images/gameplay_inc_logo.jpg",
+    "16": "images/favicon.png"
+  },
+  "side_panel": {
+    "default_path": "src/sidepanel/index.html"
+  },
+  "permissions": ["sidePanel", "contextMenus", "storage", "activeTab", "scripting", "cookies"],
+  "host_permissions": [
+    "https://gameplayus.com/*",
+    "https://www.gameplayus.com/*"
+  ]
+}

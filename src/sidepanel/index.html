@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>GamePlayUS Helper</title>
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <!-- Favicon -->
+  <link rel="icon" href="../../images/favicon.png" type="image/png">
+  <script src="../../js/jquery-3.7.1.min.js"></script>
+  <script src="../../js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="p-3">
+  <div class="container">
+    <!-- <button id="get-url-btn" class="btn btn-primary mb-3">Get Current Tab URL</button> -->
+    <div id="url-display" class="alert alert-info"></div>
+
+    <!-- New DOM interaction buttons -->
+    <div class="mb-3">
+      <button id="get-facility-info-btn" class="btn btn-warning me-2">Get Facility Info</button>
+      <!-- <button id="get-json-data-btn" class="btn btn-success me-2">Get JSON Data</button> -->
+      <!-- <button id="get-token-btn" class="btn btn-info me-2">Get Token</button> -->
+    </div>
+
+    <div id="dom-display" class="alert alert-secondary d-none">
+      <h6>DOM Information:</h6>
+      <pre id="dom-output"></pre>
+    </div>
+  </div>
+
+  <form id="field-form" class="container mt-4">
+    <h2 class="mb-4">Add Field</h2>
+    <div class="mb-3">
+      <label for="facilityId" class="form-label">Facility ID:</label>
+      <input type="text" id="facilityId" name="facilityId" class="form-control" placeholder="Auto-populated from field selection" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="facilityName" class="form-label">Facility Name:</label>
+      <input type="text" id="facilityName" name="facilityName" class="form-control" placeholder="Auto-populated from field selection" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="gpsLocation" class="form-label">GPS Location:</label>
+      <input type="text" id="gpsLocation" name="gpsLocation" class="form-control" placeholder="Auto-populated from field selection" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="city" class="form-label">City:</label>
+      <input type="text" id="city" name="city" class="form-control" placeholder="Auto-populated from field selection" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="state" class="form-label">State:</label>
+      <input type="text" id="state" name="state" class="form-control" placeholder="Auto-populated from field selection" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="county" class="form-label">County:</label>
+      <input type="text" id="county" name="county" class="form-control" placeholder="Auto-populated from field selection" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="zip" class="form-label">Zip Code:</label>
+      <input type="text" id="zip" name="zip" class="form-control" placeholder="Auto-populated from field selection" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="facilityType" class="form-label">Facility Type:</label>
+      <select id="facilityType" class="form-select">
+        <option value="elementary">Elementary School</option>
+        <option value="middle">Middle School</option>
+        <option value="high">High School</option>
+        <option value="park">Park</option>
+        <option value="private">Private</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="fieldName" class="form-label">Field Name:</label>
+      <input type="text" id="fieldName" name="fieldName" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label for="fieldType" class="form-label">Field Primary Sport Type:</label>
+      <select id="fieldType" class="form-select">
+        <option value="baseball">Baseball</option>
+        <option value="basketball">Basketball</option>
+        <option value="soccer">Soccer</option>
+        <option value="tennis">Tennis</option>
+        <option value="volleyball">Volleyball</option>
+      </select>
+    </div>
+    <!-- Field Surface Type -->
+    <div class="mb-3">
+      <label for="fieldSurfaceType" class="form-label">Field Surface Type:</label>
+      <select id="fieldSurfaceType" class="form-select">
+        <option value=""></option>
+        <option value="Grass">Grass</option>
+        <option value="Turf">Turf (Artificial)</option>
+        <option value="Synthetic">Synthetic</option>
+        <option value="Wood">Wood</option>
+        <option value="Dirt">Dirt</option>
+        <option value="BlackTop">BlackTop/Asphalt</option>
+      </select>
+    </div>
+    <!-- Google Earth Image URL -->
+    <div class="mb-3">
+      <label for="googleEarthImageUrl" class="form-label">Google Earth Image URL:</label>
+      <input type="text" id="googleEarthImageUrl" name="googleEarthImageUrl" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label for="requestVerificationToken" class="form-label">Request Verification Token:</label>
+      <input type="text" id="requestVerificationToken" name="requestVerificationToken" class="form-control" placeholder="Auto-populated from field selection" readonly>
+    </div>
+    <button type="submit" class="btn btn-success">Add Field</button>
+  </form>
+
+  <div id="field-html" class="mt-4">
+    <h2>Field Information</h2>
+    <div id="html-output" class="card">
+      <div class="card-body">
+        <p class="text-muted">Submit the form above to see field information here.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="field-json" class="mt-4">
+    <h2>Field JSON</h2>
+    <pre id="json-output" class="bg-light p-3"></pre>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
