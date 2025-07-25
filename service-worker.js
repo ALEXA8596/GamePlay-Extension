@@ -79,21 +79,6 @@ if (chrome.runtime && chrome.runtime.onMessage) {
         }
       });
       return true;
-    } else if (request.action === 'submitFormInActiveTab') {
-      // Forward request to content script in active tab
-      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        if (tabs.length > 0) {
-          chrome.tabs.sendMessage(tabs[0].id, { 
-            action: 'submitForm',
-            formSelector: request.formSelector 
-          }, (response) => {
-            sendResponse(response);
-          });
-        } else {
-          sendResponse({ error: 'No active tab found' });
-        }
-      });
-      return true;
     } else if (request.action === 'getJSONDataFromActiveTab') {
       // Forward request to content script in active tab
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -114,6 +99,11 @@ if (chrome.runtime && chrome.runtime.onMessage) {
           chrome.tabs.sendMessage(tabs[0].id, { action: 'refresh' });
         }
       });
+      sendResponse({ success: true });
+    } else if (request.action === 'sendFacilityInfo') {
+      // Relay message from content-script to side panel
+      console.log('Relaying sendFacilityInfo to side panel:', request.data);
+      chrome.runtime.sendMessage({ action: 'sendFacilityInfo', data: request.data });
       sendResponse({ success: true });
     }
   });

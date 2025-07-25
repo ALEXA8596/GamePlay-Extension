@@ -257,28 +257,6 @@ function getRequestVerificationToken() {
   }
 }
 
-// Function to click submit button
-function submitForm(formSelector = "form") {
-  try {
-    const form = document.querySelector(formSelector);
-    if (form) {
-      const submitButton = form.querySelector(
-        '[type="submit"], .submit-btn, .btn-submit'
-      );
-      if (submitButton) {
-        submitButton.click();
-        return { success: true, message: "Form submitted" };
-      } else {
-        form.submit();
-        return { success: true, message: "Form submitted via form.submit()" };
-      }
-    }
-    return { success: false, message: "Form not found" };
-  } catch (error) {
-    return { success: false, message: error.message };
-  }
-}
-
 // Listen for messages from service worker
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   console.log("Content script received message:", request);
@@ -306,12 +284,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       const tokenInfo = getRequestVerificationToken();
       console.log("Sending token info:", tokenInfo);
       sendResponse(tokenInfo);
-      break;
-
-    case "submitForm":
-      const submitResult = submitForm(request.formSelector);
-      console.log("Form submission result:", submitResult);
-      sendResponse(submitResult);
       break;
 
     case "executeScript":
@@ -343,15 +315,19 @@ chrome.runtime.sendMessage({
   title: document.title,
 });
 
-// Optional: Monitor for DOM changes
-const observer = new MutationObserver((mutations) => {
-  // You can add logic here to detect when forms or facility data changes
-  console.log("DOM changed");
-});
-
-// Start observing
-observer.observe(document.body, {
-  childList: true,
-  subtree: true,
-  attributes: true,
-});
+window.onload = () => {
+  console.log("Content script loaded on page:", window.location.href);
+  // Send facility info to service worker
+  const facilityInfo = extractFacilityInfo();
+  if(!facilityInfo || Object.keys(facilityInfo).length === 0) {
+    console.warn("No facility info found on page load");
+    return;
+  }
+  console.log("Sending facility info on load:", facilityInfo);
+  chrome.runtime.sendMessage({
+    action: "sendFacilityInfo",
+    url: window.location.href,
+    title: document.title,
+    facilityInfo: facilityInfo,
+  });
+};

@@ -415,6 +415,76 @@ const sportsData = [
   },
   {
     facilityType: "elementary",
+    fieldType: "half court basketball",
+    dimensions: { length: 37, width: 50 },
+    compatibleSports: [
+      {
+        name: "Basketball",
+        ageGroup: "12U",
+        priority: "primary",
+        id: 9,
+        sportsAgeId: 4,
+      },
+    ],
+  },
+  {
+    facilityType: "middle",
+    fieldType: "half court basketball",
+    dimensions: { length: 47, width: 50 },
+    compatibleSports: [
+      {
+        name: "Basketball",
+        ageGroup: "18U",
+        priority: "primary",
+        id: 9,
+        sportsAgeId: 7,
+      },
+    ],
+  },
+  {
+    facilityType: "high",
+    fieldType: "half court basketball",
+    dimensions: { length: 47, width: 50 },
+    compatibleSports: [
+      {
+        name: "Basketball",
+        ageGroup: "18U",
+        priority: "primary",
+        id: 9,
+        sportsAgeId: 7,
+      },
+    ],
+  },
+  {
+    facilityType: "park",
+    fieldType: "half court basketball",
+    dimensions: { length: 47, width: 50 },
+    compatibleSports: [
+      {
+        name: "Basketball",
+        ageGroup: "18U",
+        priority: "primary",
+        id: 9,
+        sportsAgeId: 7,
+      },
+    ],
+  },
+  {
+    facilityType: "private",
+    fieldType: "basketball",
+    dimensions: { length: 94, width: 50 },
+    compatibleSports: [
+      {
+        name: "Basketball",
+        ageGroup: "18U",
+        priority: "primary",
+        id: 9,
+        sportsAgeId: 7,
+      },
+    ],
+  },
+  {
+    facilityType: "elementary",
     fieldType: "soccer",
     dimensions: {
       length: 210,
@@ -727,6 +797,618 @@ const sportsData = [
         name: "Ultimate Frisbee",
         ageGroup: "18U",
         priority: "primary",
+        id: 89,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Football",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 37,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Baseball",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 8,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Softball",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 80,
+        sportsAgeId: 7,
+      },
+    ],
+  },
+  {
+    facilityType: "elementary",
+    fieldType: "football",
+    dimensions: {
+      length: 210,
+      width: 135,
+      baseballLength: 225,
+      baseballWidth: 275,
+    },
+    compatibleSports: [
+      {
+        name: "Soccer",
+        ageGroup: "12U",
+        priority: "primary",
+        id: 79,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Field hockey",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 31,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Lacrosse",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 54,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Rugby",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 73,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Ultimate Frisbee",
+        ageGroup: "12U",
+        priority: "primary",
+        id: 89,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Football",
+        ageGroup: "12U",
+        priority: "primary",
+        id: 37,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Baseball",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 8,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Softball",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 80,
+        sportsAgeId: 7,
+      },
+    ],
+  },
+  {
+    facilityType: "middle",
+    fieldType: "football",
+    dimensions: {
+      length: 300,
+      width: 150,
+      baseballLength: 225,
+      baseballWidth: 275,
+    },
+    compatibleSports: [
+      {
+        name: "Soccer",
+        ageGroup: "18U",
+        priority: "primary",
+        id: 79,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Field hockey",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 31,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Lacrosse",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 54,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Rugby",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 73,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Ultimate Frisbee",
+        ageGroup: "18U",
+        priority: "primary",
+        id: 89,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Football",
+        ageGroup: "12U",
+        priority: "primary",
+        id: 37,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Baseball",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 8,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Softball",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 80,
+        sportsAgeId: 7,
+      },
+    ],
+  },
+  {
+    facilityType: "high",
+    fieldType: "football",
+    dimensions: {
+      length: 300,
+      width: 150,
+      baseballLength: 225,
+      baseballWidth: 275,
+    },
+    compatibleSports: [
+      {
+        name: "Soccer",
+        ageGroup: "18U",
+        priority: "primary",
+        id: 79,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Field hockey",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 31,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Lacrosse",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 54,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Rugby",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 73,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Ultimate Frisbee",
+        ageGroup: "18U",
+        priority: "primary",
+        id: 89,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Football",
+        ageGroup: "12U",
+        priority: "primary",
+        id: 37,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Baseball",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 8,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Softball",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 80,
+        sportsAgeId: 7,
+      },
+    ],
+  },
+  {
+    facilityType: "private",
+    fieldType: "football",
+    dimensions: {
+      length: 300,
+      width: 150,
+      baseballLength: 225,
+      baseballWidth: 275,
+    },
+    compatibleSports: [
+      {
+        name: "Soccer",
+        ageGroup: "18U",
+        priority: "primary",
+        id: 79,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Field hockey",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 31,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Lacrosse",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 54,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Rugby",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 73,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Ultimate Frisbee",
+        ageGroup: "18U",
+        priority: "primary",
+        id: 89,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Football",
+        ageGroup: "12U",
+        priority: "primary",
+        id: 37,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Baseball",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 8,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Softball",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 80,
+        sportsAgeId: 7,
+      },
+    ],
+  },
+  {
+    facilityType: "elementary",
+    fieldType: "grass",
+    dimensions: {
+      length: 210,
+      width: 135,
+      baseballLength: 225,
+      baseballWidth: 275,
+    },
+    compatibleSports: [
+      {
+        name: "Soccer",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 79,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Field hockey",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 31,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Lacrosse",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 54,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Rugby",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 73,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Ultimate Frisbee",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 89,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Football",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 37,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Baseball",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 8,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Softball",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 80,
+        sportsAgeId: 7,
+      },
+    ],
+  },
+  {
+    facilityType: "middle",
+    fieldType: "grass",
+    dimensions: {
+      length: 300,
+      width: 150,
+      baseballLength: 225,
+      baseballWidth: 275,
+    },
+    compatibleSports: [
+      {
+        name: "Soccer",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 79,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Field hockey",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 31,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Lacrosse",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 54,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Rugby",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 73,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Ultimate Frisbee",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 89,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Football",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 37,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Baseball",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 8,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Softball",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 80,
+        sportsAgeId: 7,
+      },
+    ],
+  },
+  {
+    facilityType: "high",
+    fieldType: "grass",
+    dimensions: {
+      length: 300,
+      width: 150,
+      baseballLength: 225,
+      baseballWidth: 275,
+    },
+    compatibleSports: [
+      {
+        name: "Soccer",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 79,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Field hockey",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 31,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Lacrosse",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 54,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Rugby",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 73,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Ultimate Frisbee",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 89,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Football",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 37,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Baseball",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 8,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Softball",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 80,
+        sportsAgeId: 7,
+      },
+    ],
+  },
+  {
+    facilityType: "park",
+    fieldType: "grass",
+    dimensions: {
+      length: 300,
+      width: 150,
+      baseballLength: 225,
+      baseballWidth: 275,
+    },
+    compatibleSports: [
+      {
+        name: "Soccer",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 79,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Field hockey",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 31,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Lacrosse",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 54,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Rugby",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 73,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Ultimate Frisbee",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 89,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Football",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 37,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Baseball",
+        ageGroup: "12U",
+        priority: "secondary",
+        id: 8,
+        sportsAgeId: 4,
+      },
+      {
+        name: "Softball",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 80,
+        sportsAgeId: 7,
+      },
+    ],
+  },
+  {
+    facilityType: "private",
+    fieldType: "grass",
+    dimensions: {
+      length: 300,
+      width: 150,
+      baseballLength: 225,
+      baseballWidth: 275,
+    },
+    compatibleSports: [
+      {
+        name: "Soccer",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 79,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Field hockey",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 31,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Lacrosse",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 54,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Rugby",
+        ageGroup: "18U",
+        priority: "secondary",
+        id: 73,
+        sportsAgeId: 7,
+      },
+      {
+        name: "Ultimate Frisbee",
+        ageGroup: "18U",
+        priority: "secondary",
         id: 89,
         sportsAgeId: 7,
       },
@@ -1215,7 +1897,6 @@ async function createFieldAndAddSports({
     // Add sports to the created field
 
     // Fix first sport
-
     await fetch("https://www.gameplayus.com/api/FieldsApi/EditSport", {
       headers: {
         accept: "application/json, text/javascript, */*; q=0.01",
@@ -1397,13 +2078,13 @@ document
     chrome.runtime.sendMessage(
       { action: "getFacilityInfoFromActiveTab" },
       (response) => {
-        const display = document.getElementById("dom-display");
-        const output = document.getElementById("dom-output");
+        // const display = document.getElementById("dom-display");
+        const output = document.getElementById("alert");
 
         if (response && !response.error) {
           // output.textContent = JSON.stringify(response, null, 2);
           output.textContent = "Success";
-          display.classList.remove("d-none");
+          // display.classList.remove("d-none");
           console.log("Facility Info:", response);
 
           // Auto-populate facility ID if found
@@ -1447,9 +2128,9 @@ document
           facilityData = response;
         } else {
           output.textContent = `Error: ${
-            response?.error || "Failed to get facility info"
+            response?.error || "Failed to get facility info. Try refreshing GamePlayUS or navigating to a Facility page."
           }`;
-          display.classList.remove("d-none");
+          // display.classList.remove("d-none");
         }
       }
     );
@@ -1589,3 +2270,107 @@ async function addSport(data) {
       console.error("Error adding sport:", error);
     });
 }
+
+function getSportType(fieldName) {
+  fieldName = fieldName.toLowerCase();
+  if (fieldName.includes("soccer")) {
+    return "soccer";
+  }
+  if (fieldName.includes("half court")) {
+    return "half court basketball";
+  }
+  if (fieldName.includes("basketball")) {
+    return "basketball";
+  }
+  if (fieldName.includes("football")) {
+    return "football";
+  }
+  if (fieldName.includes("baseball")) {
+    return "baseball";
+  }
+  if (fieldName.includes("gym")) {
+    return "gym";
+  }
+  if (fieldName.includes("tennis")) {
+    return "tennis";
+  }
+  if (fieldName.includes("volleyball")) {
+    return "volleyball";
+  }
+
+  return "grass"; // Default case if no match found
+}
+
+// add onChange for the fieldName input to update the fieldType
+document.getElementById("fieldName").addEventListener("input", (e) => {
+  const fieldType = getSportType(e.target.value);
+  document.getElementById("fieldType").value = fieldType;
+});
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === "sendFacilityInfo") {
+    console.log("Facility Info received automatically: ", request);
+    const facilityInfo = request.facilityInfo;
+
+    if(!facilityInfo) {
+      console.error("No facility info received");
+      return;
+    }
+
+    // const display = document.getElementById("dom-display");
+    const output = document.getElementById("alert");
+    const response = facilityInfo;
+
+    if (response && !response.error) {
+      // output.textContent = JSON.stringify(response, null, 2);
+      output.textContent = "Success";
+      // display.classList.remove("d-none");
+      console.log("Facility Info:", response);
+
+      // Auto-populate facility ID if found
+      if (response.facilityId) {
+        document.getElementById("facilityId").value = response.facilityId;
+      }
+
+      if (response.data) {
+        const data = response.data;
+
+        if (data.City) {
+          document.getElementById("city").value = data.City;
+        }
+
+        if (data.State) {
+          document.getElementById("state").value = data.State;
+        }
+
+        if (data.County) {
+          document.getElementById("county").value = data.County;
+        }
+
+        if (data.FacilityName) {
+          document.getElementById("facilityName").value = data.FacilityName;
+        }
+
+        if (data.GpsLocation) {
+          document.getElementById("gpsLocation").value = data.GpsLocation;
+        }
+
+        if (data.ZipCode) {
+          document.getElementById("zip").value = data.ZipCode;
+        }
+
+        if (response.requestVerificationToken) {
+          document.getElementById("requestVerificationToken").value =
+            response.requestVerificationToken.token;
+        }
+      }
+
+      facilityData = response;
+    } else {
+      output.textContent = `Error: ${
+        response?.error || "Failed to get facility info. Try refreshing GamePlayUS or navigating to a Facility page."
+      }`;
+      // display.classList.remove("d-none");
+    }
+  }
+});
