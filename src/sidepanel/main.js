@@ -873,7 +873,7 @@ const sportsData = [
         ageGroup: "12U",
         priority: "primary",
         id: 37,
-        sportsAgeId: 4,
+        sportsAgeId: 7,
       },
       {
         name: "Baseball",
@@ -941,7 +941,7 @@ const sportsData = [
         ageGroup: "18U",
         priority: "primary",
         id: 37,
-        sportsAgeId: 4,
+        sportsAgeId: 7,
       },
       {
         name: "Baseball",
@@ -1009,7 +1009,7 @@ const sportsData = [
         ageGroup: "18U",
         priority: "primary",
         id: 37,
-        sportsAgeId: 4,
+        sportsAgeId: 7,
       },
       {
         name: "Baseball",
