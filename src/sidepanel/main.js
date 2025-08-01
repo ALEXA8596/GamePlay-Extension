@@ -2008,6 +2008,10 @@ document.getElementById("field-form").addEventListener("submit", (event) => {
   const fieldType =
     document.getElementById("fieldType").selectedOptions[0].value;
   const fieldSurfaceType = document.getElementById("fieldSurfaceType").value;
+
+  // Added by Jaylen
+  const numFields = parseInt(document.getElementById("numberOfFields").value);
+
   const googleEarthImageUrl = document.getElementById(
     "googleEarthImageUrl"
   ).value;
@@ -2039,36 +2043,42 @@ document.getElementById("field-form").addEventListener("submit", (event) => {
     const htmlOutput = document.getElementById("html-output");
     htmlOutput.innerHTML = generateFieldHTML(fieldObject);
 
-    createFieldAndAddSports({
-      facilityId: facilityId,
-      facilityName: facilityName,
-      facilityType: facilityType,
-      GpsLocation: gpsLocation,
-      City: city,
-      State: state,
-      County: county,
-      ZipCode: zip,
-      fieldName: fieldName,
-      fieldType: fieldType,
-      mainSport: matchingData.compatibleSports[0],
-      fieldLength: fieldObject.dimensions.length,
-      fieldWidth: fieldObject.dimensions.width,
-      fieldBaseballLength: fieldObject.dimensions.baseballLength,
-      fieldBaseballWidth: fieldObject.dimensions.baseballWidth,
-      fieldSurfaceType: fieldSurfaceType,
-      requestVerificationToken,
-      compatibleSports: matchingData.compatibleSports,
-      googleEarthImageUrl: googleEarthImageUrl,
-    });
-  } else {
-    // Handle case where no matching data is found
-    const jsonOutput = document.getElementById("json-output");
-    jsonOutput.textContent =
-      "No matching sports data found for this facility type and field type combination.";
+    // Iteratively add fields according to number of fields user inputted -Jaylen
+    for (let i = 0; i < numFields; i++) {
+      
+      let fieldNameNumbered = numFields > 1 ? `${fieldName} ${i + 1}`: fieldName;
 
-    const htmlOutput = document.getElementById("html-output");
-    htmlOutput.innerHTML =
-      '<div class="card-body"><p class="text-danger">No matching sports data found for this facility type and field type combination.</p></div>';
+      createFieldAndAddSports({
+        facilityId: facilityId,
+        facilityName: facilityName,
+        facilityType: facilityType,
+        GpsLocation: gpsLocation,
+        City: city,
+        State: state,
+        County: county,
+        ZipCode: zip,
+        fieldName: fieldNameNumbered,
+        fieldType: fieldType,
+        mainSport: matchingData.compatibleSports[0],
+        fieldLength: fieldObject.dimensions.length,
+        fieldWidth: fieldObject.dimensions.width,
+        fieldBaseballLength: fieldObject.dimensions.baseballLength,
+        fieldBaseballWidth: fieldObject.dimensions.baseballWidth,
+        fieldSurfaceType: fieldSurfaceType,
+        requestVerificationToken,
+        compatibleSports: matchingData.compatibleSports,
+        googleEarthImageUrl: googleEarthImageUrl,
+      });
+    }
+    } else {
+      // Handle case where no matching data is found
+      const jsonOutput = document.getElementById("json-output");
+      jsonOutput.textContent =
+        "No matching sports data found for this facility type and field type combination.";
+
+      const htmlOutput = document.getElementById("html-output");
+      htmlOutput.innerHTML =
+        '<div class="card-body"><p class="text-danger">No matching sports data found for this facility type and field type combination.</p></div>';
   }
 });
 
