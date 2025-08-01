@@ -938,7 +938,7 @@ const sportsData = [
       },
       {
         name: "Football",
-        ageGroup: "12U",
+        ageGroup: "18U",
         priority: "primary",
         id: 37,
         sportsAgeId: 4,
@@ -1006,7 +1006,7 @@ const sportsData = [
       },
       {
         name: "Football",
-        ageGroup: "12U",
+        ageGroup: "18U",
         priority: "primary",
         id: 37,
         sportsAgeId: 4,
@@ -1074,7 +1074,7 @@ const sportsData = [
       },
       {
         name: "Football",
-        ageGroup: "12U",
+        ageGroup: "18U",
         priority: "primary",
         id: 37,
         sportsAgeId: 4,
